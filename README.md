@@ -20,7 +20,7 @@ window.choo.on('foo', function (data) {
 ```
 
 ## API
-### instance = expose()
+### `instance = expose()`
 Create a new `choo-expose` instance.
 
 ## License
