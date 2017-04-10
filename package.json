@@ -9,7 +9,8 @@
     "test": "standard && npm run deps",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "dependency-check": "^2.8.0",
     "nyc": "^10.1.2",
@@ -20,5 +21,6 @@
     "choo",
     "expose",
     "window"
-  ]
+  ],
+  "license": "MIT"
 }
