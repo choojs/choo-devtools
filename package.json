@@ -2,15 +2,14 @@
   "name": "choo-expose",
   "description": "Expose a choo instance on the window",
   "repository": "yoshuawuyts/choo-expose",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
     "test": "standard && npm run deps",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "dependency-check": "^2.8.0",
     "nyc": "^10.1.2",
