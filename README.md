@@ -17,11 +17,20 @@ window.choo.emit('foo')
 window.choo.on('foo', function (data) {
   console.log('foo called', data)
 })
+
+window.choo.history
+// => table view of history
 ```
 
 ## API
 ### `instance = expose()`
 Create a new `choo-expose` instance.
+
+### `window.choo.state`
+Get the current state.
+
+### `window.choo.history`
+Get an overview of the last 60 events.
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
