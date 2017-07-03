@@ -9,7 +9,10 @@
     "test": "standard && npm run deps",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
-  "dependencies": {},
+  "dependencies": {
+    "on-idle": "^3.1.0",
+    "remove-array-items": "^1.0.0"
+  },
   "devDependencies": {
     "dependency-check": "^2.8.0",
     "nyc": "^10.1.2",
