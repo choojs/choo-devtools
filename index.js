@@ -40,20 +40,21 @@ function expose () {
         })
       })
 
-    function showHistory () {
-      console.table(history)
-      return i + ' events recorded, showing the last ' + MAX_HISTORY_LENGTH
-    }
+      function showHistory () {
+        console.table(history)
+        return i + ' events recorded, showing the last ' + MAX_HISTORY_LENGTH
+      }
 
-    function copy (state) {
-      var isStateString = state && typeof state === 'string'
-      var isChooPath = isStateString && arguments.length === 1 && state.indexOf('state.') === 0
+      function copy (state) {
+        var isStateString = state && typeof state === 'string'
+        var isChooPath = isStateString && arguments.length === 1 && state.indexOf('state.') === 0
 
-      if (!state || typeof state === 'function') state = window.choo.state
-      if (isChooPath) [].push.call(arguments, {state: window.choo.state})
+        if (!state || typeof state === 'function') state = window.choo.state
+        if (isChooPath) [].push.call(arguments, {state: window.choo.state})
 
-      stateCopy(isStateString ? pluck.apply(this, arguments) : state)
-    }
+        stateCopy(isStateString ? pluck.apply(this, arguments) : state)
+      }
+    })
   }
 }
 
