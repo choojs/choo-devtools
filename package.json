@@ -1,7 +1,7 @@
 {
-  "name": "choo-expose",
+  "name": "choo-devtools",
   "description": "Expose a choo instance on the window",
-  "repository": "yoshuawuyts/choo-expose",
+  "repository": "choojs/choo-devtools",
   "version": "1.3.1",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
