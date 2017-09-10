@@ -2,74 +2,46 @@
 [![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
-Expose a choo instance on the window
+Console devtools for Choo. Useful for inspecting the state of applications,
+tuning performance, and quick iteration. No installation needed means it works
+in all browsers and Electron! :sparkles:
 
 ## Usage
 ```js
-var expose = require('choo-devtools')
 var choo = require('choo')
 
 var app = choo()
-app.use(expose())
-
-console.log(window.choo.state)
-window.choo.emit('foo')
-window.choo.on('foo', function (data) {
-  console.log('foo called', data)
-})
-
-window.choo.log
-// => table view of history
+if (process.env.NODE_ENV !== 'production') {
+  app.use(require('choo-devtools')())
+}
+app.mount('body')
 ```
 
-## API
-### `instance = expose()`
-Create a new `choo-devtools` instance.
-
-### `window.choo.state`
-Get the current state.
-
-### `window.choo.log`
-### `window.choo.history`
-Get an overview of the most recent events.
-
-### `window.choo.copy`
-Serialize an object into JSON and copy it to the clipboard.
-Must be called in response to a user gesture event, like click or keyup.
-
-Example:
-
-#### copy whole choo state to clipboard
-
-```js
-window.addEventListener('keyup', function (e) {
-  // press 'c' to copy current state to clipboard
-  if (e.keyCode === 67) {
-    window.choo.copy()
-  }
-})
+## Commands
+### `choo.state`
+Log out the Choo state object.
+```txt
+❯ choo.state
 ```
 
-#### copy choo state at a specific path
-
-```js
-window.addEventListener('keyup', function (e) {
-  // press 'c' to copy current state at a specific path
-  if (e.keyCode === 67) {
-    window.choo.copy('state.foo.bar')
-  }
-})
+### `choo.log`
+Log out the last 150 events that occured in Choo. Useful during debugging to
+quickly figure out which sequences of events were responsible for the current
+state.
+```txt
+❯ choo.log
 ```
 
-```js
-// also works with nested paths such as:
-var object = { hello: { world: { lorem: 'ipsum' } } }
-window.choo.copy('hello.world.lorem', object)
-// will copy 'ipsum' to clipboard
+### `choo.copy([selector])`
+Serialize the current state to JSON and copy it to the clipboard. Can be passed
+a selector (such as `href`) to do a partial copy. Useful if you want to create
+a test based on the current application state.
+```txt
+// Copy all of state.
+❯ choo.copy()
 
-// and objects:
-window.choo.copy({cool: 'hey'})
-// will copy {'cool': 'hey'} to clipboard
+// Copy `state.href`.
+❯ choo.copy('href')
 ```
 
 ## License
