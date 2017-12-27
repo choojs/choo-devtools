@@ -2,7 +2,7 @@
   "name": "choo-devtools",
   "description": "Expose a choo instance on the window",
   "repository": "choojs/choo-devtools",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
