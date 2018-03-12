@@ -12,6 +12,7 @@
   "dependencies": {
     "choo-hooks": "^1.0.0",
     "clone": "^2.1.1",
+    "global": "^4.3.2",
     "nanologger": "^1.3.1",
     "nanoscheduler": "^1.0.0",
     "object-change-callsite": "^1.0.2",
@@ -23,10 +24,11 @@
     "wayfarer": "^6.6.2"
   },
   "devDependencies": {
+    "choo": "^6.10.0",
     "dependency-check": "^2.8.0",
     "nyc": "^10.1.2",
     "standard": "^9.0.0",
-    "tape": "^4.6.3"
+    "tape": "^4.9.0"
   },
   "keywords": [
     "choo",

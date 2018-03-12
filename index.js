@@ -1,4 +1,5 @@
 var EventEmitter = require('events').EventEmitter
+var window = require('global/window')
 
 var storage = require('./lib/storage')
 var logger = require('./lib/logger')
@@ -11,15 +12,15 @@ var getAllRoutes = require('wayfarer/get-all-routes')
 
 module.exports = expose
 
-function expose () {
+function expose (opts) {
+  opts = opts || {}
   store.storeName = 'choo-devtools'
   return store
   function store (state, emitter, app) {
     var localEmitter = new EventEmitter()
 
-    // We should start the logger before DOM is loaded.
     if (typeof window !== 'undefined') {
-      logger(state, emitter, app)
+      logger(state, emitter, opts)
     }
 
     emitter.on('DOMContentLoaded', function () {
