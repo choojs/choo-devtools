@@ -1,8 +1,8 @@
 {
   "name": "choo-devtools",
-  "description": "Expose a choo instance on the window",
+  "description": "Console devtools for Choo",
   "repository": "choojs/choo-devtools",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
