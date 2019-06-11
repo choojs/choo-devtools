@@ -2,7 +2,7 @@
   "name": "choo-devtools",
   "description": "Console devtools for Choo",
   "repository": "choojs/choo-devtools",
-  "version": "2.5.1",
+  "version": "3.0.0",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
