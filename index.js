@@ -1,5 +1,4 @@
 var EventEmitter = require('events').EventEmitter
-var window = require('global/window')
 
 var storage = require('./lib/storage')
 var logger = require('./lib/logger')

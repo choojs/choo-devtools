@@ -12,7 +12,6 @@
   "dependencies": {
     "choo-hooks": "^1.0.0",
     "clone": "^2.1.1",
-    "global": "^4.3.2",
     "nanologger": "^2.0.0",
     "nanoscheduler": "^1.0.0",
     "object-change-callsite": "^1.0.2",
