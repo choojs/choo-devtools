@@ -10,22 +10,22 @@
   },
   "dependencies": {
     "choo-hooks": "^1.0.0",
-    "clone": "^2.1.1",
+    "clone": "^2.1.2",
     "nanologger": "^2.0.0",
     "nanoscheduler": "^1.0.0",
     "object-change-callsite": "^1.0.2",
     "on-performance": "^1.2.1",
     "plucker": "0.0.0",
     "prettier-bytes": "^1.0.4",
-    "remove-array-items": "^1.0.0",
+    "remove-array-items": "^2.0.0",
     "state-copy": "^1.0.5",
     "wayfarer": "^6.6.2"
   },
   "devDependencies": {
-    "choo": "^6.10.0",
+    "choo": "^6.13.3",
     "dependency-check": "^2.8.0",
     "standard": "^14.3.1",
-    "tape": "^4.9.0"
+    "tape": "^4.11.0"
   },
   "keywords": [
     "choo",
