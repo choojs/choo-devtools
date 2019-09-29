@@ -6,8 +6,7 @@
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
-    "test": "standard && npm run deps",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+    "test": "standard && npm run deps"
   },
   "dependencies": {
     "choo-hooks": "^1.0.0",
@@ -25,7 +24,6 @@
   "devDependencies": {
     "choo": "^6.10.0",
     "dependency-check": "^2.8.0",
-    "nyc": "^10.1.2",
     "standard": "^14.3.1",
     "tape": "^4.9.0"
   },
