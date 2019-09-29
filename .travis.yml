@@ -1,11 +1,7 @@
 node_js:
-- "4"
-- "6"
-- "8"
-- "10"
-- "11"
-- "stable"
-sudo: false
+  - 'node'
+  - 'lts/*'
+dist: xenial
 language: node_js
-script: "npm run test"
-# after_success: "npm i -g codecov && npm run coverage && codecov"
+script:
+  - 'npm run test'

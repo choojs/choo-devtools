@@ -19,10 +19,10 @@
     "prettier-bytes": "^1.0.4",
     "remove-array-items": "^2.0.0",
     "state-copy": "^1.0.5",
-    "wayfarer": "^6.6.2"
+    "wayfarer": "^7.0.0"
   },
   "devDependencies": {
-    "choo": "^6.13.3",
+    "choo": "^7.0.0",
     "dependency-check": "^2.8.0",
     "standard": "^14.3.1",
     "tape": "^4.11.0"
